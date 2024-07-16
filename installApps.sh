@@ -8,7 +8,8 @@ apt-get install -y \
     smartmontools \
     net-tools \
     nmap \
-    python3.8 \
+    python3.10 \
+    python3-pip \
     golang-go \
     docker-ce docker-ce-cli containerd.io
 
