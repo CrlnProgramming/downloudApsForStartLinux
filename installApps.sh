@@ -5,6 +5,7 @@ apt-get update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
 apt-get install -y \
+    vim \
     dotnet-sdk-7.0 \
     unzip \
     smartmontools \
