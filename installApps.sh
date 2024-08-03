@@ -1,7 +1,9 @@
 #!/bin/bash
 
 apt-get update -y && apt-get full-upgrade -y && apt-get autoremove -y && apt-get autoclean -y
-	
+
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
 apt-get install -y \
     dotnet-sdk-7.0 \
     unzip \
@@ -10,8 +12,7 @@ apt-get install -y \
     nmap \
     python3.10 \
     python3-pip \
-    golang-go \
-    docker-ce docker-ce-cli containerd.io
+    golang-go 
 
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
