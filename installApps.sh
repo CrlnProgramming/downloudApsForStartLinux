@@ -7,7 +7,6 @@ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker c
 apt-get install -y \
     git \
     vim \
-    dotnet-sdk-7.0 \
     unzip \
     smartmontools \
     net-tools \
@@ -16,6 +15,8 @@ apt-get install -y \
     python3-pip \
     golang-go \
     nuget
+
+    #dotnet-sdk-7.0 \
 
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
