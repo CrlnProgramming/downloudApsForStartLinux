@@ -13,9 +13,13 @@ apt-get install -y \
     nmap \
     python3.10 \
     python3-pip \
-    golang-go 
+    golang-go \
+    mono-complete
     #nuget
     #dotnet-sdk-7.0 \
+wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O nuget.exe
+chmod +x nuget.exe
+sudo mv nuget.exe /usr/local/bin/nuget
 
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
