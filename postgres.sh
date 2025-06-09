@@ -3,7 +3,8 @@
 #apt-get install -f
 apt update && apt upgrade -y
 
-apt-get install -y postgresql-client-15 postgresql-15
+curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/keyrings/postgresql.gpg
+apt-get install -y postgresql-15 postgresql-client-15 postgresql-contrib-15
 
 echo "Проверка статуса PostgreSQL:"
 systemctl status postgresql --no-pager
