@@ -14,6 +14,7 @@ apt-get install -y \
     python3.10 \
     python3-pip \
     golang-go \
+    htop \
     mono-complete
     #nuget
     #dotnet-sdk-7.0 \
