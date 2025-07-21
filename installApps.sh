@@ -15,7 +15,8 @@ apt-get install -y \
     python3-pip \
     golang-go \
     htop \
-    mono-complete
+    mono-complete \
+    minio-client
     #nuget
     #dotnet-sdk-7.0 \
 wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O nuget.exe
