@@ -16,13 +16,15 @@ apt-get install -y \
     golang-go \
     htop \
     mono-complete \
-    minio-client
     #nuget
     #dotnet-sdk-7.0 \
+
+echo "Install nuget"
 wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O nuget.exe
 chmod +x nuget.exe
 sudo mv nuget.exe /usr/local/bin/nuget
 
+echo "Install docker-compose"
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
@@ -35,4 +37,7 @@ apt-get install -y docker-ce docker-ce-cli containerd.io
 
 usermod -aG docker $USER
 
-
+echo "Install minio client for backups"
+wget https://dl.min.io/client/mc/release/linux-amd64/mc -O ~/mc
+sudo chmod +x ~/mc && mv ~/mc /usr/local/bin/
+mc --version
