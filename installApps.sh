@@ -37,7 +37,10 @@ apt-get install -y docker-ce docker-ce-cli containerd.io
 
 usermod -aG docker $USER
 
-echo "Install minio client for backups"
-wget https://dl.min.io/client/mc/release/linux-amd64/mc -O ~/mc
-sudo chmod +x ~/mc && mv ~/mc /usr/local/bin/
-mc --version
+#echo "Install minio client for backups"
+#wget https://dl.min.io/client/mc/release/linux-amd64/mc -O ~/mc
+#sudo chmod +x ~/mc && mv ~/mc /usr/local/bin/
+#mc --version
+
+#pip3 install ansible \ 
+#    netaddr
