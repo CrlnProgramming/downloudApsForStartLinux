@@ -16,6 +16,7 @@ apt-get install -y \
     golang-go \
     htop \
     mono-complete \
+    uidmap # mapping uid процессов (или shadow-utils)
     #nuget
     #dotnet-sdk-7.0 \
 
